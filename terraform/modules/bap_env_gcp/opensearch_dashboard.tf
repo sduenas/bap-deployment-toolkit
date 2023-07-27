@@ -8,7 +8,7 @@ module "opensearch_dashboards" {
   ansible_groups          = ["opensearch-dashboards"]
 
   machine_type            = var.opensearch_dashboards_machine_type
-  machine_image           = var.opensearch_dashboards_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.opensearch_dashboards_disk_size
   disk_type               = var.opensearch_dashboards_disk_type
   zone                    = var.zone

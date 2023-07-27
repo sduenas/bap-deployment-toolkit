@@ -8,7 +8,7 @@ module "nginx" {
   ansible_groups          = ["nginx"]
 
   machine_type            = var.nginx_machine_type
-  machine_image           = var.nginx_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.nginx_disk_size
   disk_type               = var.nginx_disk_type
   zone                    = var.zone

@@ -8,7 +8,7 @@ module "opensearch" {
   ansible_groups          = ["opensearch"]
 
   machine_type            = var.opensearch_machine_type
-  machine_image           = var.opensearch_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.opensearch_disk_size
   disk_type               = var.opensearch_disk_type
   zone                    = var.zone

@@ -8,7 +8,7 @@ module "mariadb" {
   ansible_groups          = ["mariadb"]
 
   machine_type            = var.mariadb_machine_type
-  machine_image           = var.mariadb_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.mariadb_disk_size
   disk_type               = var.mariadb_disk_type
   zone                    = var.zone

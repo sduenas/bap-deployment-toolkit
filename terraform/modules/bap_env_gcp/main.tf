@@ -8,3 +8,8 @@ terraform {
     }
   }
 }
+
+
+locals {
+    machine_image = "${var.os_image_family}-cloud/${var.os_image_family}-${var.os_image_version}"
+}

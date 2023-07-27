@@ -8,7 +8,7 @@ module "sortinghat_worker" {
   ansible_groups          = ["sortinghat-worker"]
 
   machine_type            = var.sortinghat_worker_machine_type
-  machine_image           = var.sortinghat_worker_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.sortinghat_worker_disk_size
   disk_type               = var.sortinghat_worker_disk_type
   zone                    = var.zone

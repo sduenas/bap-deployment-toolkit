@@ -26,6 +26,18 @@ variable "prefix" {
   description = "A prefix to add to the resource name(s), e.g.: '<prefix>-<name>-x'"
 }
 
+variable "os_image_family" {
+  type        = string
+  description = "OS image family"
+  default     = "debian"
+}
+
+variable "os_image_version" {
+    type        = string
+    description = "OS image family version number"
+    default     = "11"
+}
+
 # MariaDB
 
 variable "mariadb_node_count" {
@@ -36,11 +48,6 @@ variable "mariadb_node_count" {
 variable "mariadb_machine_type" {
   type    = string
   default = "e2-standard-2" # 2vcpu, 8GB memory
-}
-
-variable "mariadb_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
 }
 
 variable "mariadb_disk_size" {
@@ -70,11 +77,6 @@ variable "redis_machine_type" {
   default = "e2-standard-2" # 2vcpu, 8GB memory
 }
 
-variable "redis_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
-}
-
 variable "redis_disk_size" {
   type    = number
   default = 50
@@ -100,11 +102,6 @@ variable "opensearch_node_count" {
 variable "opensearch_machine_type" {
   type    = string
   default = "e2-highmem-4" # 4vcpu, 32GB memory
-}
-
-variable "opensearch_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
 }
 
 variable "opensearch_disk_size" {
@@ -140,11 +137,6 @@ variable "opensearch_dashboards_machine_type" {
   default = "e2-standard-2"
 }
 
-variable "opensearch_dashboards_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
-}
-
 variable "opensearch_dashboards_disk_size" {
   type    = number
   # default = 200
@@ -171,11 +163,6 @@ variable "nginx_node_count" {
 variable "nginx_machine_type" {
   type    = string
   default = "e2-standard-2"
-}
-
-variable "nginx_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
 }
 
 variable "nginx_disk_size" {
@@ -205,11 +192,6 @@ variable "mordred_machine_type" {
   default = "e2-standard-2"
 }
 
-variable "mordred_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
-}
-
 variable "mordred_disk_size" {
   type    = number
   default = 50
@@ -237,11 +219,6 @@ variable "sortinghat_machine_type" {
   default = "e2-standard-2"
 }
 
-variable "sortinghat_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
-}
-
 variable "sortinghat_disk_size" {
   type    = number
   default = 50
@@ -267,11 +244,6 @@ variable "sortinghat_worker_node_count" {
 variable "sortinghat_worker_machine_type" {
   type    = string
   default = "e2-standard-2"
-}
-
-variable "sortinghat_worker_machine_image" {
-  type    = string
-  default = "debian-cloud/debian-11"
 }
 
 variable "sortinghat_worker_disk_size" {
@@ -305,4 +277,3 @@ variable "uniform_bucket_level_access" {
   type = bool
   default = false
 }
-

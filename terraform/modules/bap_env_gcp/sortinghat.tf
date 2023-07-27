@@ -8,7 +8,7 @@ module "sortinghat" {
   ansible_groups          = ["sortinghat"]
 
   machine_type            = var.sortinghat_machine_type
-  machine_image           = var.sortinghat_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.sortinghat_disk_size
   disk_type               = var.sortinghat_disk_type
   zone                    = var.zone

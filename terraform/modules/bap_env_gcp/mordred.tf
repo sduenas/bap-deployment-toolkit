@@ -8,7 +8,7 @@ module "mordred" {
   ansible_groups          = ["mordred"]
 
   machine_type            = var.mordred_machine_type
-  machine_image           = var.mordred_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.mordred_disk_size
   disk_type               = var.mordred_disk_type
   zone                    = var.zone

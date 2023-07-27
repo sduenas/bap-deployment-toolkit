@@ -8,7 +8,7 @@ module "redis" {
   ansible_groups          = ["redis"]
 
   machine_type            = var.redis_machine_type
-  machine_image           = var.redis_machine_image
+  machine_image           = local.machine_image
   disk_size               = var.redis_disk_size
   disk_type               = var.redis_disk_type
   zone                    = var.zone
