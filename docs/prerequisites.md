@@ -30,6 +30,7 @@ to some service accounts. These are the APIs to enable:
 - `compute.googleapis.com`
 - `iam.googleapis.com`
 - `cloudresourcemanager.googleapis.com`
+- `osconfig.googleapis.com`
 
 By default, the services above aren't activated when a GCP project is created,
 but they might be already activated on your project if it's been used for other
@@ -42,6 +43,7 @@ commands:
 gcloud services enable compute.googleapis.com
 gcloud services enable iam.googleapis.com
 gcloud services enable cloudresourcemanager.googleapis.com
+gcloud services enable osconfig.googleapis.com
 ```
 
 The services should now been activated.
